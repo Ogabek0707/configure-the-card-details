@@ -1,7 +1,7 @@
 <template>
-    <div class="w-full h-full flex items-center justify-center gap-[40px]">
+    <div class="w-full h-full flex items-center justify-center gap-4 md:gap-10 flex-wrap py-4">
         <div v-for="(card, index) in cards" :key="index"
-            class="w-96 h-56 mt-[100px] bg-red-100 rounded-xl relative text-white shadow-2xl transition-transform transform">
+            class="w-full max-w-md md:w-96 h-56 mt-4 md:mt-10 bg-red-100 rounded-xl relative text-white shadow-2xl transition-transform transform">
             <img alt="no" class="relative object-cover w-full h-full rounded-xl" src="https://i.imgur.com/kGkSg1v.png" />
             <div class="w-full px-8 absolute top-8">
                 <div class="flex justify-between">
@@ -34,17 +34,19 @@
             </div>
         </div>
 
-        <div>
-            <vee-form :validation-schema="schema" @submit="send" class="w-full grid grid-cols-2 gap-4 p-6 max-w-lg mx-auto mt-[100px]">
+        <div class="w-full md:w-auto">
+            <vee-form :validation-schema="schema" @submit="send"
+                class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 p-6 max-w-lg mx-auto mt-4 md:mt-10">
                 <VInput type="text" label="" name="name" placeholder="Card name" class=""></VInput>
                 <VInput type="text" label="" name="valid" placeholder="Valid" v-mask="'##/##'" class=""></VInput>
                 <VInput type="text" label="" name="expiry" placeholder="Expiry" v-mask="'##/##'" class=""></VInput>
                 <VInput type="text" label="" name="cvv" placeholder="CVV" v-mask="'###'"></VInput>
-                <VInput type="text" card="card" label="" name="card_number" placeholder="Card Number" class="col-span-2" v-mask="'#### #### #### ####'"></VInput>
-                <VButton type="submit" btn_type="primary" class="bg-green-600 col-span-2 text-[17px] text-center mt-[5px] py-[15px]">Submit</VButton>
+                <VInput type="text" card="card" label="" name="card_number" placeholder="Card Number"
+                    class="col-span-1 md:col-span-2"></VInput>
+                <VButton type="submit" btn_type="primary"
+                    class="bg-green-600 col-span-1 md:col-span-2 text-[17px] text-center mt-[5px] py-[15px]">Submit</VButton>
             </vee-form>
         </div>
-
     </div>
 </template>
 
