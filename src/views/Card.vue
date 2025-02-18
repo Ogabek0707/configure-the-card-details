@@ -60,7 +60,7 @@ const loading = ref(false)
 const schema = computed(() => {
     return {
         name: 'required|min:3|max:30',
-        'Card number': 'required|min:0|max:19',
+        card_number: 'required|min:0|max:19',
         valid: 'required|min:0|max:5',
         expiry: 'required|min:0|max:5',
         cvv: 'required|min:0|max:3',
