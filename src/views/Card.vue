@@ -41,7 +41,7 @@
                 <VInput type="text" label="" name="valid" placeholder="Valid" v-mask="'##/##'" class=""></VInput>
                 <VInput type="text" label="" name="expiry" placeholder="Expiry" v-mask="'##/##'" class=""></VInput>
                 <VInput type="text" label="" name="cvv" placeholder="CVV" v-mask="'###'"></VInput>
-                <VInput type="text" card="card" label="" name="card_number" placeholder="Card Number"
+                <VInput type="text" card="card" label="" name="card_number" placeholder="Card Number" v-mask="'#### #### #### ####'"
                     class="col-span-1 md:col-span-2"></VInput>
                 <VButton type="submit" btn_type="primary"
                     class="bg-green-600 col-span-1 md:col-span-2 text-[17px] text-center mt-[5px] py-[15px]">Submit</VButton>
