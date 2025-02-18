@@ -84,6 +84,7 @@ const send = async (values) => {
         cvv: values.cvv,
     };
     localStorage.setItem('cards', JSON.stringify(cards.value));
+    location.reload()
     loading.value = false;
 };
 
